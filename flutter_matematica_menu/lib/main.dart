@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_matematica_menu/soma.dart';
 import 'package:flutter_matematica_menu/subtracao.dart';
+import 'package:flutter_matematica_menu/multiplicacao.dart';
+import 'package:flutter_matematica_menu/divisao.dart';
 
 void main() {
   runApp(const MainApp());
@@ -41,11 +43,18 @@ class _MainAppState extends State<MainApp> {
               ),
               TextButton(
                 child: const Text('Multiplicação'),
-                onPressed: () {},
+                onPressed: () {
+                  setState(() {
+                    atual = const Multiplicacao();
+                  });
+                },
               ),
               TextButton(
                 child: const Text('Divisão'),
-                onPressed: () {},
+                onPressed: () {                  
+                  setState(() {
+                    atual = const Divisao();
+                  });},
               ),
             ],
           ),
